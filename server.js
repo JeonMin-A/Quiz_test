@@ -11,9 +11,9 @@ app.listen(5000, function(){
 //     res.sendFile(path.join(__dirname, 'waterworks/dist/index.html'))
 // })
 
-app.use(express.static(path.join(__dirname, 'quiz/dist')));
+app.use(express.static(path.join(__dirname, 'dist')));
 app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname, 'quiz/dist/index.html'))
+    res.sendFile(path.join(__dirname, 'dist/index.html'))
 })
 
 // app.get('/', function(req, res){
@@ -33,7 +33,7 @@ app.get('/', function(req, res){
 
 
 app.get('*', function(req, res){  //라우터안되는거 작동시키게 해줌
-    res.sendFile(path.join(__dirname, 'waterworks/dist/index.html'))
+    res.sendFile(path.join(__dirname, 'dist/index.html'))
 })
 
 module.exports = app;
